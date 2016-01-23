@@ -1,4 +1,4 @@
-<?php namespace Thujohn\Pdf;
+<?php namespace k98kurz\Pdf;
 
 use Illuminate\Support\ServiceProvider;
 

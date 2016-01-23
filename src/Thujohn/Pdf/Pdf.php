@@ -1,4 +1,4 @@
-<?php namespace Thujohn\Pdf;
+<?php namespace k98kurz\Pdf;
 
 use Illuminate\Support\Facades\Config as Config;
 use Illuminate\Http\Response;
@@ -20,8 +20,8 @@ class Pdf {
 		require_once 'dompdf/dompdf_config.inc.php';
 
 		$this->dompdf = new \DOMPDF();
-		
-		
+
+
 		if (Config::has('pdf::base_path')) {
 			$this->dompdf->set_base_path(Config::get('pdf::base_path'));
 		}
