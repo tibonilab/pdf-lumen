@@ -7,7 +7,7 @@ Simple Dompdf wrapper package (uses Dompdf stable version 0.5)
 
 Add `k98kurz/pdf-lumen` to `composer.json`.
 ```
-"k98kurz/pdf-lumen": "0.*"
+"k98kurz/pdf-lumen": "1.*"
 ```
 
 Run `composer update` to pull down the latest version of Pdf.
