@@ -1,42 +1,24 @@
 # Dompdf
 
-Simple Dompdf package for Laravel 4
-This package uses the latest stable version (0.5)
-
-[![Build Status](https://travis-ci.org/thujohn/pdf-l4.png?branch=master)](https://travis-ci.org/thujohn/pdf-l4)
-
+Compatibility conversion of Thujohn/Pdf for Laravel Lumen 5.*
+Simple Dompdf wrapper package (uses Dompdf stable version 0.5)
 
 ## Installation
 
-Run
+Add `k98kurz/pdf` to `composer.json`.
 ```
-composer require thujohn/pdf
+"k98kurz/pdf": "0.*"
 ```
 
-OR
-
-Add `thujohn/pdf` to `composer.json`.
-```
-"thujohn/pdf": "dev-master"
-```
-    
 Run `composer update` to pull down the latest version of Pdf.
 
-Now open up `app/config/app.php` and add the service provider to your `providers` array.
+Now open up `bootstrap/app.php` and add the service provider.
 ```php
-'providers' => array(
-	'Thujohn\Pdf\PdfServiceProvider',
-)
+	$app->register('k98kurz\Pdf\PdfServiceProvider');
 ```
 Now add the alias.
 ```php
-'aliases' => array(
-	'PDF' => 'Thujohn\Pdf\PdfFacade',
-)
-```
-Publish the config
-```
-php artisan config:publish thujohn/pdf
+    class_alias('k98kurz\Pdf\PdfFacade', 'PDF');
 ```
 
 
@@ -44,8 +26,7 @@ php artisan config:publish thujohn/pdf
 
 Show a PDF
 ```php
-Route::get('/', function()
-{
+$app->get('/', function () {
 	$html = '<html><body>'
 			. '<p>Put your html here, or generate it with your favourite '
 			. 'templating system.</p>'
@@ -56,8 +37,7 @@ Route::get('/', function()
 
 Download a PDF
 ```php
-Route::get('/', function()
-{
+$app->get('/', function () {
 	$html = '<html><body>'
 			. '<p>Put your html here, or generate it with your favourite '
 			. 'templating system.</p>'
@@ -68,8 +48,7 @@ Route::get('/', function()
 
 Returns a PDF as a string
 ```php
-Route::get('/', function()
-{
+$app->get('/', function () {
 	$html = '<html><body>'
 			. '<p>Put your html here, or generate it with your favourite '
 			. 'templating system.</p>'
@@ -80,9 +59,8 @@ Route::get('/', function()
 
 Multiple PDFs
 ```php
-for ($i=1;$i<=2;$i++)
-{
-	$pdf = new \Thujohn\Pdf\Pdf();
+for ($i=1;$i<=2;$i++) {
+	$pdf = new \k98kurz\Pdf\Pdf();
 	$content = $pdf->load(View::make('pdf.image'))->output();
 	File::put(public_path('test'.$i.'.pdf'), $content);
 }
