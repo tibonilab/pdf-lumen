@@ -1,29 +1,21 @@
 {
     "name": "tibonilab/pdf-lumen",
-    "description": "compatibility fork of Thujohn/pdf (dompdf wrapper) for Laravel Lumen",
+    "description": "compatibility fork of k98kurz/pdf (dompdf wrapper) for Laravel Lumen",
 	"keywords": ["pdf", "dompdf", "laravel", "lumen"],
     "license": "MIT",
-    "version": "1.7.0.3",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "tibonilab",
             "email": "info@tibonilab.com"
         }
     ],
-    "repositories": [
-	{
-	    "type": "vcs",
-    	    "url": "https://github.com/k98kurz/pdf-lumen"
-	}
-    ],
     "require": {
-        "php": ">=5.3.0",
-        "illuminate/support": "4.*|5.*",
-	"k98kurz/pdf-lumen": "dev-master"
+        "php": ">=5.3.0"        
     },
     "autoload": {
         "psr-0": {
-            "k98kurz\\Pdf": "src/"
+            "tibonilab\\Pdf": "src/"
         }
     }
 }
