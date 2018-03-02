@@ -12,16 +12,7 @@ Add `tibonilab/pdf-lumen-bundle` to `composer.json`.
 ```
 
 
-## Installation Lumen <= 5.3.*
-
-Add `tibonilab/pdf-lumen-bundle` to `composer.json`.
-
-```
-"tibonilab/pdf-lumen-bundle": "1.0.0"
-```
-
-
-After require right version tag for your Lumen installation run `composer update` to pull down the latest version of Pdf.
+After require the right version tag for your Lumen installation run `composer update` to pull down the latest version of Pdf.
 
 Open up `bootstrap/app.php` and add the service provider.
 ```php
