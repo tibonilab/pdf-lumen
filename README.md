@@ -8,7 +8,7 @@ Simple Dompdf wrapper package (uses Dompdf stable version 0.5)
 Add `tibonilab/pdf-lumen-bundle` to `composer.json`.
 
 ```
-"tibonilab/pdf-lumen-bundle": "2.0.0"
+"tibonilab/pdf-lumen-bundle": "~2.0.0"
 ```
 
 After require the right version tag for your Lumen installation run `composer update` to pull down the latest version of Pdf.
