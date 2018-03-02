@@ -1,4 +1,4 @@
-<?php namespace k98kurz\Pdf;
+<?php namespace tibonilab\Pdf;
 
 use Illuminate\Support\Facades\Config as Config;
 use Illuminate\Http\Response;
