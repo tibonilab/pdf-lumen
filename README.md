@@ -3,20 +3,32 @@
 Compatibility fork of k98jurz/pdf-lumen that is a conversion of Thujohn/Pdf for Laravel Lumen 5.*
 Simple Dompdf wrapper package (uses Dompdf stable version 0.5)
 
-## Installation
+## Installation Lumen >= 5.4.*
 
 Add `tibonilab/pdf-lumen-bundle` to `composer.json`.
+
 ```
-"tibonilab/pdf-lumen-bundle": "dev-master"
+"tibonilab/pdf-lumen-bundle": "2.0.0"
 ```
 
-Run `composer update` to pull down the latest version of Pdf.
 
-Now open up `bootstrap/app.php` and add the service provider.
+## Installation Lumen <= 5.3.*
+
+Add `tibonilab/pdf-lumen-bundle` to `composer.json`.
+
+```
+"tibonilab/pdf-lumen-bundle": "1.0.0"
+```
+
+
+After require right version tag for your Lumen installation run `composer update` to pull down the latest version of Pdf.
+
+Open up `bootstrap/app.php` and add the service provider.
 ```php
 	$app->register('tibonilab\Pdf\PdfServiceProvider');
 ```
-Now add the alias.
+
+And add the alias.
 ```php
     class_alias('tibonilab\Pdf\PdfFacade', 'PDF');
 ```
