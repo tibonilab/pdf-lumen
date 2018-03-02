@@ -17,5 +17,6 @@
         "psr-0": {
             "tibonilab\\Pdf": "src/"
         }
-    }
+    },
+    "minimum-stability":"dev"
 }
