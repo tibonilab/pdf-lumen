@@ -19,5 +19,5 @@
             "k98kurz\\Pdf": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
