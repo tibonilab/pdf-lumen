@@ -1,5 +1,5 @@
 {
-    "name": "tibonilab/pdf-lumen",
+    "name": "tibonilab/pdf-lumen-bundle",
     "description": "compatibility fork of k98kurz/pdf (dompdf wrapper) for Laravel Lumen",
 	"keywords": ["pdf", "dompdf", "laravel", "lumen"],
     "license": "MIT",
