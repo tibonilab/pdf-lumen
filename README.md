@@ -1,5 +1,7 @@
 # Dompdf
 
+Updade DOMPDF 09/2019
+
 Compatibility fork of k98jurz/pdf-lumen that is a conversion of Thujohn/Pdf for Laravel Lumen 5.*
 Simple Dompdf wrapper package (uses Dompdf stable version 0.5)
 
