@@ -1,6 +1,7 @@
 <?php namespace tibonilab\Pdf;
 
 use Illuminate\Http\Response;
+use Dompdf\Dompdf;
 
 class Pdf {
 	protected $dompdf;
@@ -17,9 +18,9 @@ class Pdf {
 			}
 		}
 
-		require_once 'dompdf/dompdf_config.inc.php';
+        require_once 'dompdf/src/Autoloader.php';
 
-		$this->dompdf = new \DOMPDF();
+		$this->dompdf = new Dompdf();
 	}
 
 	public function load($html, $size = 'A4', $orientation = 'portrait'){
@@ -62,7 +63,7 @@ class Pdf {
 	}
 
 	public function clear(){
-		\Image_Cache::clear();
+		// \Image_Cache::clear(); deprecated
 		return true;
 	}
 }
